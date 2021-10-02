@@ -4,8 +4,52 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
-<h4> ĐĂNG KÍ HỌC Viên</h4>
+<style>
+    form{
+        background: wheat;
+    }
+    h4{color: orangered;
+        margin-left: 300px;
+    }
+    body{
+        margin-left: 300px;
+    }
+    form{
+        margin-right: 300px;
+    }
 
+</style>
+
+<body>
+<h4> ĐĂNG KÍ HỌC VIÊN</h4>
+<form method="post">
+    <fieldset>
+ <label>Họ và Tên:</label>
+    <input type="text"name="Họ và tên"><br><br>
+    <label>Ngày sinh:</label>
+    <input type="date"name="Ngày sinh"><br><br>
+    <label>Giới tính:</label>
+    <input type="radio" name="Giới tính">
+    <label>Nam</label>
+    <input type="radio" name="Giới tính">
+    <label>Nữ</label><br><br>
+    <label>Địa chỉ:</label><br>
+    <textarea cols="20"rows="5"></textarea><br><br>
+    <label>Lớp:</label>
+    <select>
+        <option value="">-Chon lớp-</option>
+        <option value="Lớp 10">Lớp 10</option>
+        <option value="Lớp 11">Lớp 11</option>
+        <option value="Lớp 12">Lớp 12</option>
+    </select><br><br>
+    <label>Email:</label>
+    <input type="email" name="Email"><br><br>
+    <label>Điện thoại</label>
+    <input type="text"name="Điện thoai"><br><br>
+        <input type="submit"value="Đăng kí">
+        <input type="reset"value="Reset">
+
+        </fieldse>
+</form>
 </body>
 </html>
