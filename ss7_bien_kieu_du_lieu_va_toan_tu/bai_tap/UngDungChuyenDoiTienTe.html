@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .b1{margin-left:3cm}
+        .b2{margin-left: 2cm}
+        .in2{margin-left: 4cm}
+        .sl1{margin-left: 3cm}
+
+
+    </style>
+</head>
+<body>
+<b>Amount</b>
+<b class="b1">Form Currency</b>
+<b class="b2">To Currency</b><br>
+<input type="text" id="a">
+<select id="tiente1">
+    <option value="VN">Việt Nam</option>
+    <option value="USD">USD</option>
+</select>
+<select id="tiente2"class="sl1">
+    <option value="USD">USD</option>
+    <option value="VN">Việt Nam</option>
+</select>
+
+<input onclick="tinh()" value="Convert" type="button"class="in2">
+<p id="c"></p>
+</body>
+<script>
+    function tinh() {
+      let b1 = parseInt(document.getElementById('a').value);
+      let b3 =(document.getElementById('tiente2').value);
+      let kq;
+         kq = b1 / 23000 + b3;
+         document.getElementById('c').innerHTML= 'Result :' + kq;
+
+    }
+</script>
+</html>

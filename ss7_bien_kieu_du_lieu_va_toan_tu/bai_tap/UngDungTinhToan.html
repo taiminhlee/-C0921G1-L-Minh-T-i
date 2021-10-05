@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="gt1">
+<input type="text" id="gt2"><br>
+<input type="button" onclick="tong()" value="Addtion(+)">
+<input type="button" onclick="hieu()" value="Subtraction(-)">
+<input type="button" onclick="tich()" value="Multiplication(*)">
+<input type="button" onclick="thuong()" value="Division(/)">
+<p id="kq"></p>
+</body>
+<script>
+  function tong() {
+      let a = parseInt(document.getElementById('gt1').value);
+      let b = parseInt(document.getElementById('gt2').value);
+      let c;
+       c = a + b
+      document.getElementById('kq').innerHTML='Result Addtion :'+ c;
+  }
+    function hieu() {
+        let a = parseInt(document.getElementById('gt1').value);
+        let b = parseInt(document.getElementById('gt2').value);
+        let c;
+        c = a - b;
+        document.getElementById('kq').innerHTML='Result Subtraction :'+ c;
+    }
+    function tich() {
+        let a = parseInt(document.getElementById('gt1').value);
+        let b = parseInt(document.getElementById('gt2').value);
+        let c;
+        c = a * b;
+        document.getElementById('kq').innerHTML='Result Multiplication :'+ c;
+    }
+    function thuong() {
+        let a = parseInt(document.getElementById('gt1').value);
+        let b = parseInt(document.getElementById('gt2').value);
+        let c;
+        c = a / b;
+        document.getElementById('kq').innerHTML='Result Division :'+ c;
+    }
+</script>
+</html>
