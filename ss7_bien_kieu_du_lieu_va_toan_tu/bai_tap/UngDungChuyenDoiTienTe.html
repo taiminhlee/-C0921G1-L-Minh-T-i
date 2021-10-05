@@ -18,12 +18,12 @@
 <b class="b2">To Currency</b><br>
 <input type="text" id="a">
 <select id="tiente1">
-    <option value="VN">Việt Nam</option>
+    <option value="VND">VND</option>
     <option value="USD">USD</option>
 </select>
 <select id="tiente2"class="sl1">
     <option value="USD">USD</option>
-    <option value="VN">Việt Nam</option>
+    <option value="VND">VND</option>
 </select>
 
 <input onclick="tinh()" value="Convert" type="button"class="in2">
@@ -33,9 +33,17 @@
     function tinh() {
       let b1 = parseInt(document.getElementById('a').value);
       let b3 =(document.getElementById('tiente2').value);
-      let kq;
-         kq = b1 / 23000 + b3;
-         document.getElementById('c').innerHTML= 'Result :' + kq;
+      let b2 =(document.getElementById('tiente1').value);
+      if (b2 === b3){
+          document.getElementById('c').innerHTML=(b1);
+      }
+      if (b2 === 'VND' && b3 ==='USD'){
+          document.getElementById('c').innerHTML=(b1 / 23000);
+      }
+        if (b2 === 'USD' && b3 === 'VND') {
+            document.getElementById('c').innerHTML=(b1 * 23000);
+        }
+
 
     }
 </script>
