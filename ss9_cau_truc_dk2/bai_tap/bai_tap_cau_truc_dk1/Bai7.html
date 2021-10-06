@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let thangNay = parseInt(prompt('Nhập tiền tháng này'));
+    let thangTruoc = parseInt(prompt('Nhập tiền tháng trước'));
+    if (thangNay > thangTruoc){
+        alert('Tháng này đã tăng ' + ((thangNay / thangTruoc) / 100) + '%');
+    }else {alert('Tháng này đã giảm ' + ((thangNay / thangTruoc) / 100) + '%')}
+</script>
+</body>
+</html>

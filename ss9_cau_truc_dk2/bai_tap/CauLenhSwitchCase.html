@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text"id="giaTri">
+<input onclick="tinhNgay()"type="button" value="Tính số ngày">
+<script>
+    function tinhNgay() {
+        let variable = parseInt(document.getElementById('giaTri').value);
+        switch (variable) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                alert('Tháng ' + variable + ' có 31 ngày ');
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                alert('Tháng ' + variable + ' có 30 ngày ');
+                break;
+            case 2:
+                alert('Tháng ' + variable + ' có 28 hoặc 29 này ');
+                break;
+            default :
+                alert('Không có tháng ' + variable);
+
+        }
+    }
+</script>
+</body>
+</html>
