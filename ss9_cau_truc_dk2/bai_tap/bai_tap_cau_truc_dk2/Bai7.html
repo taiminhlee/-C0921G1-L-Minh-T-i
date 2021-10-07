@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt('Nhập giá trị a'));
+    let b = parseInt(prompt('Nhập giá trị b'));
+    let c = parseInt(prompt('Nhập giá trị c'));
+    let detal = (Math.pow(b, 2)) - (4 * a * c);
+    if (detal > 0){
+       let nghiemX = (- b + Math.sqrt(detal)) / (2 * a);
+       let nghiemY = (- b - Math.sqrt(detal)) / (2 * a);
+       alert('phương trình có 2 nghiệm : x = ' + nghiemX + ' y = ' + nghiemY );
+    }else if (detal === 0){
+       alert('phương trình có nghiệm kép = ' + (- b / (2 * a)));
+    } else {alert('phương trình vô nghiệm')}
+</script>
+</body>
+</html>

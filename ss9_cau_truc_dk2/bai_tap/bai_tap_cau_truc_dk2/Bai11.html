@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let thuNhap = parseInt(prompt('thu nhập cá nhân'));
+    let thue;
+    if (thuNhap <= 5000000){
+        thue = thuNhap * 5 /100;
+        alert('thuế cần phải nộp : ' + thue + ' đồng ');
+    }else if (5000000 < thuNhap <= 10000000){
+        thue = thuNhap * (10 /100);
+        alert('thuế cần phải nộp : ' + thue + ' đồng ');
+    }else if (10000000 < thuNhap <= 18000000){
+        thue = thuNhap * (15 /100);
+        alert('thuế cần phải nộp : ' + thue + ' đồng ');
+    }else if (18000000 < thuNhap <= 32000000){
+        thue = thuNhap * (2/10);
+        alert('thuế cần phải nộp : ' + thue + ' đồng ');
+    }else {alert('thuế cần phải nộp ' + (thue = thuNhap * (24/100)) + 'đồng')}
+</script>
+</body>
+</html>
