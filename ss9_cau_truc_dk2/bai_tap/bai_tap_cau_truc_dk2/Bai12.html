@@ -6,7 +6,11 @@
 </head>
 <body>
 <script>
-    
+    let banDau = parseInt(prompt('Nhập số tiền ban đầu'));
+    let thang = parseInt(prompt('Nhập số tháng vay'));
+    let lai = parseInt(prompt('Nhập lãi xuất hàng tháng'));
+    let tienLai = banDau * lai/12*thang;
+    alert("tiền lãi = " + tienLai);
 </script>
 </body>
 </html>

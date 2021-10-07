@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{margin-left: 500px}
+    </style>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<h2>Do you love me?</h2><br>
+<button type="button" value="Yes" onclick="chapNhan()">Yes</button>
+<button type="button" value="No" onmouseover="tuChoi()" id="random">No</button>
+<script>
+    function chapNhan() {
+        alert('Yes, you are right');
+    }
+    function tuChoi() {
+        let canvas = document.getElementById('canvas');
+        let W = window.innerWidth;
+        let H = window.innerHeight;
+        canvas.width = W;
+        canvas.height = H;
+
+        let x = Math.floor(Math.random() * W);
+        let y = Math.floor(Math.random() * H);
+        document.getElementById('random').style.left = x + 'px';
+        document.getElementById('random').style.top = y + 'px';
+    }
+
+
+
+
+
+</script>
+</body>
+</html>
