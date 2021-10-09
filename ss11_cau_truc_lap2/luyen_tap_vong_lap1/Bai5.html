@@ -8,13 +8,14 @@
 <script>
     let a = 1;
     let b = 0;
-    let temp =1;
-    for (let i =0;i <=20;i++) {
-        temp = a +b;
+    let temp = 1;
+    let sum = 0;
+    for (let i = 0; i < 20; i++) {
+        temp = a + b;
         a = b;
         b = temp;
-        document.write(temp + '<br>');
-    }
+        sum += temp;
+    } document.write('tổng='+sum);
 </script>
 </body>
 </html>

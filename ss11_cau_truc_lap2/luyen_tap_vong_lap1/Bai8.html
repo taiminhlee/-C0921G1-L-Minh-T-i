@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="Chơi" onclick="choi()">
+<input type="reset" value="Chơi lại" onclick="choiLai()">
+<script>
+    let chon;
+    let min;
+    let max;
+    let num;
+
+    function choi() {
+        min = parseInt(prompt('nhập khoảng từ'));
+        max = parseInt(prompt('đến'));
+        chon = parseInt(prompt('chọn số'));
+        num = Math.floor(Math.random() * (max - min + 1)) + min;
+        if (chon === num) {
+            alert('Bạn đã chiến thắng');
+        } else {
+            for (let i = 1; i < 3; i++) {
+                chon = parseInt(prompt('chọn lại'));
+            }
+            alert('bạn đã thua');
+        }
+    }
+    function choiLai() {
+        location.reload();
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let tienGui = parseInt(prompt('Số tiền gửi'));
+    let thang = parseInt(prompt('số tháng muốn lấy'));
+    for (let i = 0; i < thang; i ++) {
+        tienGui = tienGui + tienGui * 0.3 / 100;
+    }
+    alert('Sau ' + thang + 'tháng' + 'số tiền là : ' + tienGui);
+</script>
+</body>
+</html>
