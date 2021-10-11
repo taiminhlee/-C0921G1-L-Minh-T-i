@@ -6,16 +6,18 @@
 </head>
 <body>
 <script>
+    let num = parseInt(prompt('nhập số'));
     let a = 1;
     let b = 0;
     let temp = 1;
     let sum = 0;
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < num; i++) {
         temp = a + b;
         a = b;
         b = temp;
         sum += temp;
-    } document.write('tổng='+sum);
+    }
+    document.write('tổng=' + sum);
 </script>
 </body>
 </html>
