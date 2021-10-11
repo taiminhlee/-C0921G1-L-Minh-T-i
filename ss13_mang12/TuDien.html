@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="input">
+<input type="button" value="Tìm kiếm" onclick="timKiem()">
+<script>
+    function timKiem() {
+        let tuDien = document.getElementById('input').value;
+        let english = ['car', 'cat', 'dog', 'apple', 'house'];
+        let tiengViet = ['xe hơi', 'mèo', 'chó', 'táo', 'nhà'];
+        if (english.includes(tuDien)){
+            for (let i = 0; i < english.length; i++) {
+                    if (tuDien == english[i]) {
+                        alert(tiengViet[i]);
+                        break;
+                    }
+            }
+    }else {alert('không có trong từ điển')}
+    }
+
+
+</script>
+</body>
+</html>

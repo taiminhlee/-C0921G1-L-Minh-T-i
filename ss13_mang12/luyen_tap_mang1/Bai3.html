@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = [2, 12, 56, 3, 8, 9, 100, 8, 49, 1];
+    let sum = 0;
+    let max = Math.max.apply(Math, str);
+    for (let i = 0; i < str.length; i++) {
+        sum += str[i];
+    }
+    document.write('giá trị trung bình của mảng là :' + (sum / 10));
+    alert('số  lớn nhất là :' + max);
+</script>
+</body>
+</html>
