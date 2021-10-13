@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let characters = [',', '.', '/', '?', '-', '+'];
+    let dauGach = document.createElement('_');
+    for (let i = 0; i < characters.length; i++) {
+        if (characters[i] === '-') {
+            characters[i] = '_';
+        }
+    }
+    document.write(characters);
+</script>
+</body>
+</html>

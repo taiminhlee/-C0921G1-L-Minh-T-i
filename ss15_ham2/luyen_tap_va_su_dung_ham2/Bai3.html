@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="input">
+<input type="text" id="input1">
+<button type="button" onclick="tinhDienTich()">Tính diện tích</button>
+<button type="button" onclick="tinhChuVi()">Tính chu vi</button>
+<script>
+    let input = document.getElementById('input');
+    let input1 =document.getElementById('input1');
+
+    function tinhDienTich() {
+       alert('diện tích = ' +  input *input1);
+    }
+
+    function tinhChuVi() {
+
+        alert('chi vi = '+   (input + input1) * 2) ;
+    }
+</script>
+</body>
+</html>

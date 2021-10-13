@@ -8,28 +8,27 @@
 <input type="button" value="Chơi" onclick="choi()">
 <input type="reset" value="Chơi lại" onclick="choiLai()">
 <script>
-    let chon;
-    let min;
-    let max;
-    let num;
-
     function choi() {
-        min = parseInt(prompt('nhập khoảng từ'));
-        max = parseInt(prompt('đến'));
-        chon = parseInt(prompt('chọn số'));
-        num = Math.floor(Math.random() * (max - min + 1)) + min;
-        if (chon === num) {
-            alert('Bạn đã chiến thắng');
-        } else {
-            for (let i = 1; i < 3; i++) {
-                chon = parseInt(prompt('chọn lại'));
+        let min = parseInt(prompt('nhập khoảng từ'));
+        let max = parseInt(prompt('đến'));
+        let chon;
+        let num = Math.floor(Math.random() * (max - min + 1)) + min;
+        for (let i = 0; i < 3; i++) {
+            chon = parseInt(prompt('chọn số'));
+            if (chon === num) {
+                alert('Bạn đã chiến thắng');
+                break;
+            } else if (chon<num){
+                alert('số này nhỏ hơn số cần tìm');
+            }else {
+                alert('số này lớn hơn số cần tìm');
             }
-            alert('bạn đã thua');
+            }alert('bạn đã thua')
         }
-    }
-    function choiLai() {
-        location.reload();
-    }
+
+        function choiLai() {
+            location.reload();
+        }
 </script>
 </body>
 </html>
