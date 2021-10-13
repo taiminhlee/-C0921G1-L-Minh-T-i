@@ -5,21 +5,20 @@
     <title>Title</title>
 </head>
 <body>
-<input type="text" id="input">
-<input type="text" id="input1">
-<button type="button" onclick="tinhDienTich()">Tính diện tích</button>
-<button type="button" onclick="tinhChuVi()">Tính chu vi</button>
 <script>
-    let input = document.getElementById('input');
-    let input1 =document.getElementById('input1');
-
-    function tinhDienTich() {
-       alert('diện tích = ' +  input *input1);
+    function tinhGiaiThua(a) {
+        let result = 1;
+       let i=1;
+       while (i<=a){
+           result *= i;
+           i++
+       }return result;
     }
-
-    function tinhChuVi() {
-
-        alert('chi vi = '+   (input + input1) * 2) ;
+    let input = parseInt(prompt('Nhập số'));
+    if (input>=0) {
+        alert('giai thừa của ' + input + '= ' + tinhGiaiThua(input));
+    }else {
+        alert('Nhập sai');
     }
 </script>
 </body>

@@ -6,19 +6,16 @@
 </head>
 <body>
 <script>
-    function tinhDienTich(a, b) {
-        return a * b;
+    function tinhDienTich(a) {
+        return a * a * Math.PI;
     }
-    function tinhChuVi(a, b) {
-        return (a + b) * 2;
+    function tinhChuVi(a) {
+        return 2 * a * Math.PI;
 
     }
-    let input1 = parseInt(prompt('Nhập chiều rộng để tính diện tích'));
-    let input2 = parseInt(prompt('Nhập chiều dài để tính diện tích'));
-   document.write('diện tích = ' + tinhDienTich(input1,input2) + '<br>');
-    let input3 =parseInt(prompt('Nhập chiều rộng để tính chu vi'));
-    let input4 =parseInt(prompt('Nhập chiều dài để tính chu vi'));
-    document.write('chu vi = ' + tinhChuVi(input3,input4));
+    let input = parseInt(prompt('Nhập chiều bán kính'));
+   document.write('diện tích = ' + tinhDienTich(input) + '<br>');
+   document.write('chu vi = ' + tinhChuVi(input));
 </script>
 </body>
 </html>

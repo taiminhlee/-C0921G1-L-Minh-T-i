@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function xetKyTu(a, b) {
+        let count =0;
+        if (a.includes(b)) {
+            let count = 0;
+            for (let i = 0; i < a.length; i++) {
+             if   (b ==a[i]){
+                 count++;
+             }
+                }return count;
+            }else {
+            return -1;
+        }
+    }
+
+    let str = ['a', 'b', 'c', 'd', 'a', 'a', 'c'];
+    let input = prompt("nhập");
+    alert(xetKyTu(str, input));
+
+</script>
+</body>
+</html>

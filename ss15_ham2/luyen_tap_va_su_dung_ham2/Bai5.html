@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function soSanh(a, b, c) {
+        if (a < b) {
+            if (a < c) {
+                return a;
+            }else {
+                return c;
+            }
+        }else if (b<c){
+            return b;
+        }else {
+            return c;
+        }
+    }
+    let input1 =parseInt(prompt('Nhập số thứ nhất'));
+    let input2 =parseInt(prompt('Nhập số thứ hai'));
+    let input3 =parseInt(prompt('Nhập số thứ ba'));
+    alert('Số bé nhất là : ' + soSanh(input1,input2,input3));
+</script>
+</body>
+</html>
