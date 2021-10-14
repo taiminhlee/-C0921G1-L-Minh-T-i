@@ -7,11 +7,12 @@
 <body>
 <script>
     let str =[2,12,56,3,8,9,100,8,49,1];
+    let count =0;
     for (let i=0;i<str.length;i++) {
-        if (str[i] > 10) {
-          document.write(str[i] + '<br>');
+        if (str[i] >= 10) {
+            count++;
         }
-    }
+    }alert('có ' + count + 'số lớn hơn 10');
 </script>
 </body>
 </html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Add New Product</h3>
+<input type="text" id="them">
+<button type="button" onclick="themSanPham()">Add</button>
+<br>
+<p id="display"></p>
+<script>
+    let product = ['Oppo A71', 'Nokia 6', 'Samsung Galaxy', 'Sony Xperia'];
+    display();
+
+    function display() {
+        debugger;
+        let tableString = '<table border="1">';
+        for (let i = 0; i < product.length; i++) {
+            tableString += '<tr>'
+            for (let j = 0; j < 4; j++) {
+                tableString += '<td width="25px" height="25px">' + product[i] + '</td>';
+            }
+            tableString += +'</tr>';
+        }
+        tableString += '</table>';
+        document.getElementById("display").innerHTML = tableString;
+    }
+</script>
+</body>
+</html>
