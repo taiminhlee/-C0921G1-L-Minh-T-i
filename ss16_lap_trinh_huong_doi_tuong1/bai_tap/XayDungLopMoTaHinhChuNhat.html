@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="display" height="300" width="400"></canvas>
+<script>
+    function Rectangle(rong, dai) {
+        this.rong = rong;
+        this.dai = dai;
+        this.setRong = function (rong) {
+            this.rong = rong;
+        }
+        this.setDai = function (dai) {
+            this.dai = dai;
+        }
+        this.dienTich = function () {
+            return  this.rong * this.dai;
+        }
+        this.chuVi = function () {
+            return (this.rong + this.dai) * 2;
+        }
+    }
+
+    let input = new Rectangle(2, 3);
+    input.setRong(4);
+    input.setDai(5);
+    alert('diện tích = ' + input.dienTich());
+    alert('chu vi = ' + input.chuVi());
+    let canvas = document.getElementById('display');
+    let ctx = canvas.getContext("2d");
+    ctx.strokeRect(20, 20, 150, 100);
+</script>
+</body>
+</html>

@@ -10,22 +10,51 @@
 <button type="button" onclick="themSanPham()">Add</button>
 <br>
 <p id="display"></p>
+
 <script>
     let product = ['Oppo A71', 'Nokia 6', 'Samsung Galaxy', 'Sony Xperia'];
     display();
 
     function display() {
-        debugger;
+        let count = 1;
         let tableString = '<table border="1">';
         for (let i = 0; i < product.length; i++) {
-            tableString += '<tr>'
-            for (let j = 0; j < 4; j++) {
-                tableString += '<td width="25px" height="25px">' + product[i] + '</td>';
-            }
-            tableString += +'</tr>';
+            tableString += '<tr>';
+            tableString += '<td>' + (count++) + '.' + product[i] + '</td>';
+            tableString += '<td> <button type="button"onclick="edit(' + i + ')">Edit</button></td>';
+            tableString += '<td> <button type="button"onclick="xoa(' + i + ')">Delete</button></td>';
+            tableString += '</tr>';
         }
         tableString += '</table>';
         document.getElementById("display").innerHTML = tableString;
+    }
+
+    function themSanPham() {
+        let add = document.getElementById('them').value;
+        if (add != '') {
+            product.push(add);
+            document.getElementById('them').value = '';
+        }
+
+        display();
+    }
+
+    function edit(index) {
+        let change = prompt('Nhập mặt hàng thay thế');
+        if (change != null && change != '') {
+            product[index] = change;
+        }
+
+        display();
+    }
+
+    function xoa(index) {
+        let conform = confirm('bạn có muốn xóa ' + product[i] + ' này không ?');
+        if (conform) {
+            product.splice(index, 1);
+        }
+
+        display();
     }
 </script>
 </body>
