@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mobile = function (phone) {
+        this.check = function () {
+            if (this.status) {
+                alert('Đang bật');
+            } else {
+                alert('Đã tắt')
+            }
+        }
+        this.turnOn = function () {
+            this.status = true;
+            return this.mobile;
+        }
+        this.turnOff = function () {
+            this.status = false;
+        }
+        this.massage = '';
+        this.setMassage = function (massage) {
+            this.massage = massage;
+        }
+        this.getMassage = function () {
+            return this.massage;
+        }
+        this.sendMassage = function (massage, phone) {
+            phone.setMassage(massage);
+        }
+        this.saveSendMassage = function () {
+            this.sendMassage();
+        }
+        this.saveToMassage = function () {
+            this.setMassage();
+        }
+        this.seeSend = function () {
+            return this.saveSendMassage();
+        }
+        this.seeTo = function () {
+            return this.saveToMassage();
+        }
+        this.battery = function (energy) {
+            return this.energy;
+        }
+
+    }
+    let iphone = new mobile();
+    let samsung = new mobile();
+    iphone.turnOn();
+    iphone.sendMassage('alo alo', samsung);
+    samsung.turnOn();
+    document.write(samsung.getMassage());
+</script>
+</body>
+</html>

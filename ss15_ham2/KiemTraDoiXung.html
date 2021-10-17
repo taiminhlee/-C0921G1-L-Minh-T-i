@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isPalindrome(s) {
+        let length = s.length - 1
+        for (let i = 0; i < length; i++) {
+            if (s[i] !== s[length]) {
+                return false;
+                break;
+            }
+            length--;
+        }
+        return true;
+    }
+
+    let input = isPalindrome(parseInt(prompt('nhập')));
+    isPalindrome(input);
+    // let array = [];
+    // array = input;
+    // // isPalindrome(array);
+</script>
+</body>
+</html>

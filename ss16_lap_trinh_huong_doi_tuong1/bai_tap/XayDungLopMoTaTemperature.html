@@ -7,15 +7,15 @@
 <body>
 <script>
     function temperature(c) {
-        if (c < -273) {
+        if (this.c < -273) {
             return false;
         }
         this.c = c;
         this.cToF = function () {
-            return (c * 1.8) + 32;
+            return (this.c * 1.8) + 32;
         }
         this.cToK = function () {
-            return c + 273.15;
+            return this.c + 273.15;
         }
     }
 
