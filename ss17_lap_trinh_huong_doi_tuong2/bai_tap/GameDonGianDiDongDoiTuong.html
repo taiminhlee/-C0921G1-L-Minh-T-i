@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="game"></div>
+<script>
+    class Hero {
+        constructor(image, top, left, size, right, bottom) {
+            this.image = image;
+            this.top = top;
+            this.left = left;
+            this.size = size;
+            this.right = right;
+            this.bottom = bottom;
+        }
+
+
+        getHeroElement () {
+            return '<img width="' + this.size + '"' +
+                ' height="' + this.size + '"' +
+                ' src="' + this.image + '"' +
+                ' style="top: ' + this.top + 'px; left:' + this.left + 'px;position:absolute;" />';
+        }
+
+        moveRight () {
+            this.left += 100;
+            console.log('ok: ' + this.left);
+        }
+        moveBottom () {
+            this.bottom += 100;
+            console.log('ok: ' + this.bottom);
+        }
+        moveLeft () {
+            this.right += 100;
+            console.log('ok: ' + this.right);
+        }
+        moveTop () {
+            this.top += 100;
+            console.log('ok: ' + this.top);
+        }
+
+    }
+
+    var hero = new Hero('https://scontent.fsgn2-1.fna.fbcdn.net/v/t1.15752-9/242101963_501998067864814_2827488395372742206_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=ae9488&_nc_ohc=UXM6lrusY6oAX8uakms&_nc_ht=scontent.fsgn2-1.fna&oh=3f8a4f6d289191cc28ee0ff092ba135f&oe=619038E9', 20, 30, 200, 30, 20);
+
+    function start() {
+        if (hero.left < window.innerWidth - hero.size) {
+            hero.moveRight();
+            hero.moveBottom();
+            hero.moveLeft();
+            hero.moveTop();
+        }
+        document.getElementById('game').innerHTML = hero.getHeroElement();
+        setTimeout(start, 500)
+    }
+
+    start();
+</script>
+</body>
+</html>

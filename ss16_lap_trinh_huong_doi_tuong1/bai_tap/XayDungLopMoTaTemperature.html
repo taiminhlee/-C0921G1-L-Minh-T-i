@@ -6,18 +6,23 @@
 </head>
 <body>
 <script>
-    function temperature(c) {
-        if (this.c < -273) {
-            return false;
+    class temperature {
+        constructor(c) {
+            this.c = c;
+            if (this.c < 0) {
+                return false
+            }
         }
-        this.c = c;
-        this.cToF = function () {
-            return (this.c * 1.8) + 32;
-        }
-        this.cToK = function () {
+
+        cToK() {
             return this.c + 273.15;
         }
+
+        cToF() {
+            return this.c / 33.8;
+        }
     }
+
 
     let input = new temperature(parseInt(prompt("nhập độ C")));
     alert(input + 'độ C' + '=' + input.cToF() + 'độ F');

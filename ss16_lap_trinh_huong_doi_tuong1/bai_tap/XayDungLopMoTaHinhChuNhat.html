@@ -7,19 +7,22 @@
 <body>
 <canvas id="display" height="300" width="400"></canvas>
 <script>
-    function Rectangle(rong, dai) {
-        this.rong = rong;
-        this.dai = dai;
-        this.setRong = function (rong) {
+    class Rectangle {
+        constructor(rong,dai) {
             this.rong = rong;
-        }
-        this.setDai = function (dai) {
             this.dai = dai;
         }
-        this.dienTich = function () {
+
+        setRong (rong) {
+            this.rong = rong;
+        }
+        setDai (dai) {
+            this.dai = dai;
+        }
+        dienTich (){
             return  this.rong * this.dai;
         }
-        this.chuVi = function () {
+        chuVi () {
             return (this.rong + this.dai) * 2;
         }
     }

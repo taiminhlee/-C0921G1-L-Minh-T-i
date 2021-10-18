@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(weight = 10) {
+
+            this.weight = weight;
+        }
+
+        getWeigh(weight) {
+            this.weight = weight;
+        }
+    }
+
+
+    class humman {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        setGander(gender) {
+            this.gender = gender;
+        }
+
+        checkApple(apple) {
+            alert('khối lượng quả táo' + apple);
+        }
+
+        say(string) {
+            alert(string);
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(name) {
+            this.getName = name;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setWeight(weight) {
+            this.getWeight = weight;
+        }
+
+        eat(eat) {
+            if (eat === true) {
+                return this.weight++;
+            }
+        }
+    }
+
+    let Adam = new humman('Adam', 'female', 70);
+    let Eva = new humman('Eva', 'male', 60);
+    let apple = new Apple();
+    while (apple.weight > 0) {
+        Adam.eat(true) && Eva.eat(true);
+        Adam.checkApple(apple.weight);
+        apple.weight -= 2;
+    }
+    if (apple.weight === 0) {
+        Eva.say(Eva.getName() + ' :' + ' hết táo gòi');
+        Adam.say(Adam.getName() + ': ' + ' Để anh hái thêm');
+    }
+    Adam.say(Adam.getName() + ':' + 'em bao nhiêu kí');
+    Eva.say(Eva.getName() + ' :' + 'em' + Eva.getWeight() + ' kí' + ' còn anh');
+    Adam.say(Adam.getName() + ' :' + ' anh' + Adam.getWeight() + ' kí');
+</script>
+</body>
+</html>
