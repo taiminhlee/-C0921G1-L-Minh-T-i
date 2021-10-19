@@ -12,24 +12,20 @@
     class switchButton {
         constructor() {
             this.status = false;
+            this.lamp=null;
         }
 
-        connectToLamp() {
-           if (this.status === true) {
-               alert('đã kết nối');
-           }else {
-               alert('chưa kết nối');
-           }
+        connectToLamp(lamp) {
+          this.lamp=lamp;
 
         }
-
         switchOff() {
-            this.status = false;
-            return alert(' tắt')
+            this.lamp = false;
+            return alert(' tắt');
         }
 
         switchOn() {
-            this.status = true;
+            this.lamp = true;
             return alert('bật');
         }
     }
@@ -41,32 +37,35 @@
 
         turnOff() {
             this.status = false;
-            alert('đèn tắt')
         }
 
         turnOn() {
             this.status = true;
-            alert('đèn sáng');
+        }
+        getStatus(){
+            if (this.status){
+                return false;
+            }else {
+                return true;
+            }
         }
     }
 
     let congtat = new switchButton();
     let den = new electricLamp();
+
     function connection() {
-        congtat.connectToLamp();
+        congtat.connectToLamp(den);
     }
-        function on() {
-            den.turnOn(congtat.switchOn());
-        }
 
-        function off() {
-            den.turnOff(congtat.switchOff());
-        }
+    function on() {
+        (congtat.switchOn());
 
+    }
 
-
-
-
+    function off() {
+        den.turnOff(congtat.switchOff());
+    }
 </script>
 </body>
 </html>

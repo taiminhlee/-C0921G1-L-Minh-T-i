@@ -8,24 +8,32 @@
 <canvas id="display" height="300" width="400"></canvas>
 <script>
     class Rectangle {
-        constructor(rong,dai) {
+        constructor(rong, dai) {
             this.rong = rong;
             this.dai = dai;
         }
 
-        setRong (rong) {
+        setRong(rong) {
             this.rong = rong;
         }
-        setDai (dai) {
+
+        setDai(dai) {
             this.dai = dai;
         }
-        dienTich (){
-            return  this.rong * this.dai;
+
+        dienTich() {
+            return this.rong * this.dai;
         }
-        chuVi () {
+
+        chuVi() {
             return (this.rong + this.dai) * 2;
         }
+
+        getContext(x) {
+            return x;
+        }
     }
+
 
     let input = new Rectangle(2, 3);
     input.setRong(4);
@@ -33,7 +41,7 @@
     alert('diện tích = ' + input.dienTich());
     alert('chu vi = ' + input.chuVi());
     let canvas = document.getElementById('display');
-    let ctx = canvas.getContext("2d");
+    let ctx = canvas.getContext('2d');
     ctx.strokeRect(20, 20, 150, 100);
 </script>
 </body>

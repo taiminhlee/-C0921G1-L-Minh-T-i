@@ -65,8 +65,9 @@
     let apple = new Apple();
     while (apple.weight > 0) {
         Adam.eat(true) && Eva.eat(true);
-        Adam.checkApple(apple.weight);
         apple.weight -= 2;
+        Adam.checkApple(apple.weight);
+
     }
     if (apple.weight === 0) {
         Eva.say(Eva.getName() + ' :' + ' hết táo gòi');
