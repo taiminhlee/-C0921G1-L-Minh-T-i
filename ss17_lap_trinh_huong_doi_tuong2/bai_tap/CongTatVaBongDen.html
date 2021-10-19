@@ -9,62 +9,66 @@
 <button type="button" onclick="off()">Tắt</button>
 <button type="button" onclick="connection()">Kết nối</button>
 <script>
-    class switchButton {
+    class Lamp {
         constructor() {
             this.status = false;
-            this.lamp=null;
         }
 
-        connectToLamp(lamp) {
-          this.lamp=lamp;
+        turnOn = function () {
+            if (this.status) {
+                alert("đen đang tắt ")
+            } else {
+                alert("đèn đã được bật!");
+                this.status = true;
+            }
+        };
+        turnOff = function () {
+            if (this.status) {
+                alert("đèn đã được tắt!");
+                this.status = false
+            } else {
+                alert("đèn đang sáng");
 
-        }
-        switchOff() {
-            this.lamp = false;
-            return alert(' tắt');
-        }
-
-        switchOn() {
-            this.lamp = true;
-            return alert('bật');
-        }
+            }
+        };
     }
 
-    class electricLamp {
+    class switchButton {
         constructor() {
-            this.status = false;
+            this.lamp = {};
         }
 
-        turnOff() {
-            this.status = false;
-        }
-
-        turnOn() {
+        conectToLamp (obj) {
+            this.lamp = obj;
             this.status = true;
-        }
-        getStatus(){
-            if (this.status){
-                return false;
-            }else {
-                return true;
+        };
+        turnOff () {
+            if (this.status) {
+                this.lamp.turnOff();
+
+            }
+        };
+        turnOn () {
+            if (this.status) {
+                this.lamp.turnOn();
             }
         }
     }
 
-    let congtat = new switchButton();
-    let den = new electricLamp();
+
+    let sonySwitcher = new switchButton();
+    let sonyLamp = new Lamp();
 
     function connection() {
-        congtat.connectToLamp(den);
+        sonySwitcher.conectToLamp(sonyLamp);
     }
 
     function on() {
-        (congtat.switchOn());
-
+        sonySwitcher.turnOn();
     }
 
     function off() {
-        den.turnOff(congtat.switchOff());
+        sonySwitcher.turnOff();
     }
 </script>
 </body>
