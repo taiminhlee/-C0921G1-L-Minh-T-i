@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let lengthArr = parseInt(prompt('nhập độ dài 2 mảng'));
+    let arrBob = [];
+    let arrAlice = [];
+    let point =[];
+    let pointBob =0;
+    let pointAlive =0;
+    for (let i = 0; i < lengthArr; i++) {
+        arrBob[i] = parseInt(prompt('nhập số thứ ' + (i + 1) + 'của Bob'));
+        if (1 <= i <= 100) {
+            arrBob.push(arrBob[i]);
+        }
+    }
+    for (let i = 0; i < lengthArr; i++) {
+        arrAlice[i] = parseInt(prompt('nhập số thứ ' + (i + 1) + 'của Alice'));
+        if (1<=i<=100){
+            arrAlice.push(arrAlice[i]);
+        }
+    }
+    for (let i=0;i<lengthArr;i++){
+        if (arrBob[i]>arrAlice[i]){
+            pointBob += 1;
+        }else if (arrBob[i]<arrAlice[i]){
+            pointAlive +=1;
+        }
+    }
+    point.push(pointBob);
+    point.push(pointAlive);
+    alert(point);
+</script>
+</body>
+</html>

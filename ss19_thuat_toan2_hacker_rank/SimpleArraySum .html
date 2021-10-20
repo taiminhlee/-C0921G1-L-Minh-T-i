@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let lengthArr;
+    do {
+        lengthArr =parseInt(prompt('nhập đọ dài mảng'));
+    }while (lengthArr<0||isNaN(lengthArr));
+    let sum=0;
+    let arr=[];
+    for (let i=0;i<lengthArr;i++){
+
+        do {
+            arr[i] =parseInt(prompt('nhập số thứ nhất '+(i+1)));
+        }while (arr[i]>1000||isNaN(arr[i]));
+        sum +=arr[i];
+    }
+    alert(sum);
+</script>
+</body>
+</html>

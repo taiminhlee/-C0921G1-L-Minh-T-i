@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let min = 0;
+    let max = 0;
+    let arr = [];
+    for (let i = 0; i < 5; i++) {
+        do {
+            arr[i] = parseInt(prompt('Nhập số thứ' + (i + 1)));
+        } while (isNaN(arr[i] || arr[i] < 1 || arr[i] > Math.pow(10, 9)));
+    }
+
+    function tinhMax(arr) {
+        arr.shift();
+        for (let i=0;i<arr.length;i++){
+            max +=arr[i];
+        }return max;
+    }
+    function tinhMin(arr){
+        // arr.unshift(arr[4]);
+        arr.pop();
+        for (let i=0;i<arr.length;i++){
+            min +=arr[i];
+        }return min
+    }
+    alert(tinhMax(arr));
+    alert(tinhMin(arr));
+
+</script>
+</body>
+</html>

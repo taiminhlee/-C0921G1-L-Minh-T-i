@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let lengthArr;
+    do {
+         lengthArr = parseInt(prompt('nhập chiều dài mảng'));
+    }while (lengthArr<1||lengthArr>10||isNaN(lengthArr))
+  let sum=0;
+    let arr=[];
+    for (let i=0;i<lengthArr;i++){
+        do {
+            arr[i] = parseInt(prompt('nhập số thứ '+ (i+1)));
+
+        }while (arr[i]<0||arr[i]>Math.pow(10,10)||isNaN(arr[i]));
+        sum +=arr[i];
+    }
+    alert(sum);
+
+</script>
+</body>
+</html>

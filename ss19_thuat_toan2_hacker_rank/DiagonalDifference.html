@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [
+        [-1, 342, 3],
+        [13, -2, 32],
+        [2, 32, -3]
+    ];
+    let sum1 = 0;
+    let sum2=0;
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr.length; j++) {
+            if (i + j === (arr[i].length - 1)) {
+                sum1 += arr[i][j];
+            }
+        }sum2 += arr[i][i];
+    }
+    alert(Math.abs(sum1));
+    alert(Math.abs(sum2));
+</script>
+</body>
+</html>

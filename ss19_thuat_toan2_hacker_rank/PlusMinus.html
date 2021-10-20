@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let lengthArr;
+    do {
+        lengthArr = parseInt(prompt('nhập độ dài mảng'));
+    } while (lengthArr < 0 || lengthArr > 100 || isNaN(lengthArr));
+    arr = [];
+    sum = 0;
+    for (let i = 0; i < lengthArr; i++) {
+        do {
+            arr[i] = parseInt(prompt('nhập số thứ nhất' + (i + 1)));
+        } while (arr[i] < -100 || arr[i] > 100 || isNaN(arr[i]));
+        sum += arr[i];
+    }
+    for (let i = 0; i < lengthArr; i++) {
+        alert(arr[i] / sum);
+    }
+</script>
+</body>
+</html>
