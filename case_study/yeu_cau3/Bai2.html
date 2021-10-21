@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let lengthArr =parseInt(prompt('Nhập độ dài  mảng '));
+    let arrA =[];
+    let arrB =[];
+    let arr=[];
+    for (let i =0;i<lengthArr;i++){
+        arrA[i] =parseInt(prompt('nhập số thứ '+ (i+1)+ 'của mảng A'));
+        arrB[i]=parseInt(prompt('nhập số thứ'+ (i+1)+ ' của mảng B'));
+    }
+  for (let i=0;i<lengthArr;i++){
+     if (!arrA.includes(arrB[i])){
+         arr.push(arrB[i]);
+     }
+  }
+    for (let i=0;i<lengthArr;i++) {
+        if (!arrB.includes(arrA[i])) {
+            arr.push(arrA[i]);
+        }
+    }
+  alert(arr);
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function chuanHoaChuoi(string) {
+        let arr = string.split(' ');
+        let output = '';
+        let tmp;
+        for (let i = 0; i < arr.length; i++) {
+            tmp = arr[i].trim().toLowerCase();
+            if (tmp != '') {
+                tmp = tmp.substring(0, 1).toUpperCase() + tmp.substr(1);
+                output += tmp + ' ';
+            }
+        }
+        return output.trim();
+    }
+
+    function longgest(string) {
+        let arr = string.split(' ');
+        let max = arr[0].length;
+        let output = null;
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i].length > max) {
+                max = arr[i].length;
+                output = arr[i];
+            }
+        }
+        return output;
+    }
+
+    function main(string) {
+        alert(chuanHoaChuoi(string));
+        alert(longgest(chuanHoaChuoi(string)));
+    }
+let input = prompt('nhập từ');
+    main(input);
+</script>
+</body>
+</html>

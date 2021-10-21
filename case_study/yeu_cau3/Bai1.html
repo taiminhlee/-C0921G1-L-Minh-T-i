@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let lengthArr = parseInt(prompt('nhập độ dài mảng'));
+    let arrA =[];
+    let arrB=[];
+    let sum =0;
+    for (let i=0;i<lengthArr;i++){
+        arrA[i] =parseInt(prompt('nhập số thứ nhất' + (i+1)));
+        sum += arrA[i];
+        arrB.push(sum);
+    }
+    alert(arrB)
+</script>
+</body>
+</html>

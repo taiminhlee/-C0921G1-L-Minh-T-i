@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let chieuDai =parseInt(prompt('nhập chiều rông'));
+    let chieuRong =parseInt(prompt('nhập chiều rộng'));
+    for (let i = 0; i < chieuDai; i++) {
+        for (let j = 0; j < chieuRong; j++) {
+            if (i === 0 || i === chieuDai-1 || j === 0 || j === chieuRong-1) {
+                document.write('*');
+            } else {
+                document.write(' \xa0');
+            }
+        }
+        document.write('<br>');
+    }
+</script>
+</body>
+</html>

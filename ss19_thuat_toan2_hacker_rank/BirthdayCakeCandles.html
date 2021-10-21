@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let lengthArr;
+    do {
+        lengthArr=parseInt(prompt('Nhập độ dài mảng'));
+    }while (lengthArr<1||lengthArr>Math.pow(10,5)||isNaN(lengthArr));
+    let arr=[];
+
+    for (let i=0;i<lengthArr;i++){
+        do {
+            arr[i]=parseInt(prompt('nhập số thứ '+ (i+1)));
+        }while (arr[i]<1||arr[i]>Math.pow(10,7)||isNaN(arr[i]));
+
+    }
+    let max =arr[0];
+    for (let i=0;i<lengthArr;i++){
+        if (arr[i]>max){
+            max =arr[i];
+        }
+    }
+    let count =0;
+    for (let i=0;i<lengthArr;i++){
+        if (arr[i]===max){
+            count++;
+        }
+    }
+    alert(count);
+</script>
+</body>
+</html>
