@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function check(num){
+        let multiple;
+        for (let i=0;i<num;i++){
+            if ((num +i)%5===0){
+                multiple =num;
+            }
+        }
+    }
+    let num ;
+    do {
+        num =parseInt(prompt('Nhập số lượng học sinh'));
+    }while (num<1||num>60||isNaN(num));
+    let grade =[];
+    for (let i=0;i<num;i++){
+         grade[i] =parseInt(prompt('nhập lớp của học sinh thứ ' + i+1));
+         if (grade[i]<=33){
+             grade.push(grade);
+         }if (33<grade[i]<=100){
+             for (let j=0;j<grade[i];j++){
+                 if ((grade[i]+j)%5===0){
+
+                 }
+             }
+        }
+    }
+</script>
+</body>
+</html>

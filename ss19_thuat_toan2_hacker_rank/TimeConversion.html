@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function date(hour, minute, second, method) {
+        if (method === 'PM' || method === 'pm' && hour !== 12) {
+            hour += 12;
+        }
+        if (method === 'AM' || method === 'am') {
+            if (hour === 12) {
+                hour = 0;
+            }
+        }
+        return hour + ':' + minute + ':' + second;
+    }
+
+    let hour = parseInt(prompt('Nhập giờ'));
+    let minute = parseInt(prompt('Nhập phút'));
+    let second = parseInt(prompt('Nhập giây'));
+    let methoud = (prompt('Nhập buổi'));
+    alert( date(hour, minute, second, methoud));
+</script>
+</body>
+</html>

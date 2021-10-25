@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 style="margin-left: 300px">Hệ thống quản lý bài tập Casestudy module 1</h1>
+<div>
+    <h5>Yêu cầu 1 :</h5>
+    <button type="button" onclick="bai1_1()">Bài 1</button>
+    <button type="button" onclick="bai1_2()">Bài 2</button>
+    <button type="button" onclick="bai1_3()">Bài 3</button>
+    <button type="button" onclick="bai1_4()">Bài 4</button>
+</div>
+<div>
+    <h5>Yêu cầu 2 :</h5>
+    <button type="button" onclick="bai2_1()">Bài 1</button>
+    <button type="button" onclick="bai2_2()">Bài 2</button>
+</div>
+<div>
+    <h5>Yêu cầu 3 :</h5>
+    <button type="button" onclick="bai3_1()">Bài 1</button>
+    <button type="button" onclick="bai3_2()">Bài 2</button>
+    <button type="button" onclick="bai3_3()">Bài 3</button>
+    <button type="button" onclick="bai3_4()">Bài 4</button>
+    <button type="button" onclick="bai3_5()">Bài 5</button>
+</div>
+<div>
+    <h5>Yêu cầu 4 :</h5>
+    <button type="button" onclick="bai4_1()">Bài 1</button>
+    <button type="button" onclick="bai4_2()">Bài 2</button>
+</div>
+<div>
+    <h5>Yêu cầu 5 :</h5>
+    <button type="button" onclick="bai5_1()">Bài 1</button>
+    <button type="button" onclick="bai5_2()">Bài 2</button>
+    <button type="button" onclick="bai5_3()">Bài 3</button>
+</div>
+</body>
+<script>
+    function bai1_1() {
+        let chieuDai = parseInt(prompt('nhập chiều rông'));
+        let chieuRong = parseInt(prompt('nhập chiều rộng'));
+        for (let i = 0; i < chieuDai; i++) {
+            for (let j = 0; j < chieuRong; j++) {
+                if (i === 0 || i === chieuDai - 1 || j === 0 || j === chieuRong - 1) {
+                    document.write('*');
+                } else {
+                    document.write(' \xa0');
+                }
+            }
+            document.write('<br>');
+        }
+    }
+
+    function bai1_2() {
+        let chieuCao = parseInt(prompt('Nhập chiều cao'));
+        for (let i = 0; i <= chieuCao; i++) {
+            for (let j = 0; j <= chieuCao; j++) {
+                if (i === chieuCao || i === j || j === 0) {
+                    document.write('*');
+                } else {
+                    document.write('&nbsp&nbsp');
+                }
+            }
+            document.write('<br>');
+        }
+    }
+
+    function bai1_3() {
+        let input = parseInt(prompt('Nhập chiều cao'));
+        for (let i = 1; i < input; i++) {
+            for (let j = input; j > i; j--) {
+                document.write('&nbsp&nbsp');
+            }
+            for (let k = 0; k < i * 2 - 1; k++) {
+                document.write('*');
+            }
+            document.write('<br>');
+        }
+    }
+
+    function bai1_4() {
+        let chieuCao = parseInt(prompt('Nhập chiều cao'));
+        for (let i = 0; i <= chieuCao; i++) {
+            for (let k = chieuCao; k > i; k--) {
+                document.write('&nbsp');
+            }
+            for (let j = 0; j <= chieuCao; j++) {
+                if (i === chieuCao || i === j || j === 0) {
+                    document.write('*');
+                } else {
+                    document.write('&nbsp&nbsp');
+                }
+            }
+            document.write('<br>');
+        }
+    }
+
+    function bai2_1() {
+        let thuNhap = parseInt(prompt('Nhập lương'));
+        let thue;
+        if (thuNhap >= 15000000) {
+            thue = thuNhap * 20 / 100;
+        } else if (7000000 <= thuNhap < 15000000) {
+            thue = thuNhap * 10 / 100;
+        } else {
+            thue = thuNhap * 5 / 100;
+        }
+        alert('thuế của bạn : ' + thue + ' đồng');
+    }
+
+    function bai2_2() {
+        let kyTu = prompt('Nhập kí tự');
+        switch (kyTu) {
+            case 'u' :
+            case 'U' :
+            case 'o' :
+            case 'O' :
+            case 'i' :
+            case 'I' :
+            case 'a' :
+            case 'A' :
+            case 'e' :
+            case 'E' :
+                alert('đây là nguyên âm');
+                break;
+            default : {
+                alert('Đây là phụ âm');
+            }
+        }
+    }
+
+    function bai3_1() {
+        let lengthArr = parseInt(prompt('nhập độ dài mảng'));
+        let arrA = [];
+        let arrB = [];
+        let sum = 0;
+        for (let i = 0; i < lengthArr; i++) {
+            arrA[i] = parseInt(prompt('nhập số thứ nhất' + (i + 1)));
+            sum += arrA[i];
+            arrB.push(sum);
+        }
+        alert(arrB);
+    }
+
+    function bai3_2() {
+        let lengthArr = parseInt(prompt('Nhập độ dài  mảng '));
+        let arrA = [];
+        let arrB = [];
+        let arr = [];
+        for (let i = 0; i < lengthArr; i++) {
+            arrA[i] = parseInt(prompt('nhập số thứ ' + (i + 1) + 'của mảng A'));
+            arrB[i] = parseInt(prompt('nhập số thứ' + (i + 1) + ' của mảng B'));
+        }
+        for (let i = 0; i < lengthArr; i++) {
+            if (!arrA.includes(arrB[i])) {
+                arr.push(arrB[i]);
+            }
+        }
+        for (let i = 0; i < lengthArr; i++) {
+            if (!arrB.includes(arrA[i])) {
+                arr.push(arrA[i]);
+            }
+        }
+        alert(arr);
+    }
+
+    function bai3_3() {
+        let arrA = [3, 1, 4, 3, 2, 5];
+        let arrB = [4, 2, 7, 9, 9, 4];
+        let max = arrA[0] / arrB[0]
+        let index = 0;
+        for (let i = 1; i < arrA.length; i++) {
+            if ((arrA[i] / arrB[i]) > max) {
+                max = arrA[i] / arrB[i];
+                index = i;
+            }
+        }
+        alert(index);
+    }
+
+    function bai3_4() {
+        let number = prompt('Nhập');
+        let output = '';
+        for (let i = 0; i < number.length; i++) {
+            switch (number[i]) {
+                case '0' : {
+                    output += ('  không');
+                    break;
+                }
+                case '1' : {
+                    output += (' một');
+                    break;
+                }
+                case '2' : {
+                    output += (' hai');
+                    break;
+                }
+                case '3' : {
+                    output += (' ba');
+                    break;
+                }
+                case '4' : {
+                    output += (' bốn');
+                    break;
+                }
+                case '5' : {
+                    output += (' năm');
+                    break;
+                }
+                case '6' : {
+                    output += (' sáu');
+                    break;
+                }
+                case '7' : {
+                    output += (' bảy');
+                    break;
+                }
+                case '8' : {
+                    output += (' tám');
+                    break;
+                }
+                case '9' : {
+                    output += (' chín');
+                    break;
+                }
+                default : {
+                    alert('nhập không đúng');
+                }
+            }
+        }
+        alert(output);
+    }
+
+    function bai3_5() {
+        let menu = ['Cafe', 'Cam vắt', 'Nước ép cà rốt', 'Nước ép cà chua', 'Nước lọc', 'Nước dừa'];
+        let price = [23000, 50000, 30000, 30000, 60000, 1000];
+        let sum = 0;
+        let chose;
+        let quantity;
+        for (let i = 0; i < menu.length; i++) {
+            document.write((i + 1) + '.' + menu[i] + '<br>');
+        }
+        do {
+            chose = parseInt(prompt('nhập thức uống'));
+            if (chose === 7) {
+                break;
+            }
+            alert(menu[chose - 1] + ' có giá :' + price[chose - 1]);
+            quantity = parseInt(prompt('Nhập số lượng'));
+            sum += (price[chose - 1] * quantity);
+        } while (chose < 6 || chose > 0 || isNaN(chose) || isNaN(quantity));
+        alert('số tiền phải trả ' + sum + ' đồng');
+    }
+
+    function bai4_1() {
+        function chuanHoaChuoi(string) {
+            let arr = string.split(' ');
+            let output = '';
+            let tmp;
+            for (let i = 0; i < arr.length; i++) {
+                tmp = arr[i].trim().toLowerCase();
+                if (tmp != '') {
+                    tmp = tmp.substring(0, 1).toUpperCase() + tmp.substr(1);
+                    output += tmp + ' ';
+                }
+            }
+            return output.trim();
+        }
+
+        function longgest(string) {
+            let arr = string.split(' ');
+            let max = arr[0].length;
+            let output = null;
+            for (let i = 1; i < arr.length; i++) {
+                if (arr[i].length > max) {
+                    max = arr[i].length;
+                    output = arr[i];
+                }
+            }
+            return output;
+        }
+
+        function main(string) {
+            alert(chuanHoaChuoi(string));
+            alert(longgest(chuanHoaChuoi(string)));
+        }
+
+        let input = prompt('nhập từ');
+        main(input);
+    }
+
+    function bai4_2() {
+        let arr1 = prompt('Nhập chuỗi ký tự 1');
+        let arr2 = prompt('Nhập chuỗi kí tự 2');
+        let kq = '';
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr2.indexOf(arr1[i]) !== -1) {
+                kq += arr1[i]
+                arr2 = arr2.slice(0, arr2.indexOf(arr1[i])) + arr2.slice(arr2.indexOf(arr1[i]) + 1, arr2.length)
+            }
+        }
+        alert(kq.length);
+    }
+
+    function bai5_1() {
+        function tinhTongSoChan(m, n) {
+            let arr = new Array(m);
+            let sum = 0;
+            for (let i = 0; i < m; i++) {
+                arr[i] = new Array(n);
+                for (let j = 0; j < n; j++) {
+                    arr[i][j] = parseInt(prompt('nhập số thứ ' + '[' + (i) + ']' + '[' + (j) + ']'));
+                    // arr.push(arr[i][j]);
+                    if (arr[i][j] % 2 === 0) {
+                        sum += arr[i][j];
+                    }
+                }
+            }
+            return sum;
+        }
+
+        let cot = parseInt(prompt('Nhập cột'));
+        let hang = parseInt(prompt('Nhập hàng'));
+        alert(tinhTongSoChan(cot, hang));
+    }
+
+    function bai5_2() {
+        function kiemTraSNT(num) {
+            if (num >= 2) {
+                for (let i = 2; i < num; i++) {
+                    if (num % i === 0) {
+                        return false;
+                    }
+                }
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function lietKeVaDemSNT(arr) {
+            let kq = [];
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < arr[i].length; j++) {
+                    if (kiemTraSNT(arr[i][j])) {
+                        kq.push(arr[i][j]);
+                    }
+                }
+
+            }
+            alert(kq);
+            alert(kq.length);
+        }
+
+
+        let input = [
+            [12, 34, 7, 23, 6],
+            [32, 42, 53, 2, 1],
+        ];
+        lietKeVaDemSNT(input);
+    }
+
+    function bai5_3() {
+        function timGiaTriLonNhat(arr) {
+            let max = arr[0][0];
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < arr[i].length; j++) {
+                    if (arr[i][j] > max) {
+                        max = arr[i][j];
+                    }
+                }
+            }
+            return max;
+        }
+
+        function timGiaTriNhoNhat(arr) {
+            let min = arr[0][0];
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < arr[i].length; j++) {
+                    if (arr[i][j] < min) {
+                        min = arr[i][j];
+                    }
+                }
+            }
+            return min;
+        }
+
+        let arr = [
+            [12, 4234, 1231, 432],
+            [123, 4233, 123, 234]
+        ];
+        alert('Giá trị lớn nhất trong mảng ' + timGiaTriLonNhat(arr));
+        alert('Giá trị nhỏ nhất trong mảng ' + timGiaTriNhoNhat(arr));
+    }
+</script>
+</html>
