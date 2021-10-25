@@ -12,13 +12,25 @@
             this.weight = weight;
         }
 
-        getWeigh(weight) {
-            this.weight = weight;
+        decreasse() {
+            this.weight--
+        }
+
+        isEmply() {
+            if (this.weight == 0) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        getWeigh() {
+            return this.weight;
         }
     }
 
 
-    class humman {
+    class Humman {
         constructor(name, gender, weight) {
             this.name = name;
             this.gender = gender;
@@ -30,11 +42,11 @@
         }
 
         checkApple(apple) {
-            alert('khối lượng quả táo' + apple);
+            return apple.isEmply();
         }
 
         say(string) {
-            alert(string);
+            alert(this.name + ':' + string);
         }
 
         getName() {
@@ -53,29 +65,26 @@
             this.getWeight = weight;
         }
 
-        eat(eat) {
-            if (eat === true) {
-                return this.weight++;
+        eat(apple) {
+            if (this.checkApple(apple)) {
+                this.weight++;
+                apple.decreasse();
             }
         }
     }
 
-    let Adam = new humman('Adam', 'female', 70);
-    let Eva = new humman('Eva', 'male', 60);
+    let adam = new Humman('Adam', 'female', 70);
+    let eva = new Humman('Eva', 'male', 60);
     let apple = new Apple();
-    while (apple.weight > 0) {
-        Adam.eat(true) && Eva.eat(true);
-        apple.weight -= 2;
-        Adam.checkApple(apple.weight);
-
-    }
+    adam.eat(apple)
+    eva.eat(apple);
     if (apple.weight === 0) {
-        Eva.say(Eva.getName() + ' :' + ' hết táo gòi');
-        Adam.say(Adam.getName() + ': ' + ' Để anh hái thêm');
+        eva.say(eva.getName() + ' :' + ' hết táo gòi');
+        adam.say(adam.getName() + ': ' + ' Để anh hái thêm');
     }
-    Adam.say(Adam.getName() + ':' + 'em bao nhiêu kí');
-    Eva.say(Eva.getName() + ' :' + 'em' + Eva.getWeight() + ' kí' + ' còn anh');
-    Adam.say(Adam.getName() + ' :' + ' anh' + Adam.getWeight() + ' kí');
+    adam.say( 'em bao nhiêu kí');
+    eva.say( 'em' + eva.getWeight() + ' kí' + ' còn anh');
+    adam.say( ' anh' + adam.getWeight() + ' kí');
 </script>
 </body>
 </html>

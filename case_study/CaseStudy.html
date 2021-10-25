@@ -259,12 +259,12 @@
         function chuanHoaChuoi(string) {
             let arr = string.split(' ');
             let output = '';
-            let tmp;
+            let handle;
             for (let i = 0; i < arr.length; i++) {
-                tmp = arr[i].trim().toLowerCase();
-                if (tmp != '') {
-                    tmp = tmp.substring(0, 1).toUpperCase() + tmp.substr(1);
-                    output += tmp + ' ';
+                handle = arr[i].trim().toLowerCase();
+                if (handle != '') {
+                    handle = handle.slice(0, 1).toUpperCase() + handle.slice(1);
+                    output += handle + ' ';
                 }
             }
             return output.trim();
@@ -299,7 +299,7 @@
         for (let i = 0; i < arr1.length; i++) {
             if (arr2.indexOf(arr1[i]) !== -1) {
                 kq += arr1[i]
-                arr2 = arr2.slice(0, arr2.indexOf(arr1[i])) + arr2.slice(arr2.indexOf(arr1[i]) + 1, arr2.length)
+                arr2 = arr2.slice(0, arr2.indexOf(arr1[i])) + arr2.slice(arr2.indexOf(arr1[i]) + 1, arr2.length);
             }
         }
         alert(kq.length);
@@ -312,8 +312,7 @@
             for (let i = 0; i < m; i++) {
                 arr[i] = new Array(n);
                 for (let j = 0; j < n; j++) {
-                    arr[i][j] = parseInt(prompt('nhập số thứ ' + '[' + (i) + ']' + '[' + (j) + ']'));
-                    // arr.push(arr[i][j]);
+                    arr[i][j] = parseInt(prompt('nhập số thứ ' + '[' + i + ']' + '[' + j + ']'));
                     if (arr[i][j] % 2 === 0) {
                         sum += arr[i][j];
                     }
